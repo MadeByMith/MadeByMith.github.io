@@ -97,6 +97,9 @@
           text-align: center;
           color: rgb(from white r g b / 0.7);
           transition: 200ms ease-in-out;
+          @media (prefers-color-scheme: light) {
+            color: rgb(from black r g b / 0.75);
+          }
           &:hover {
             @media (prefers-color-scheme: light) {
               color: rgb(from black r g b / 1);
@@ -104,9 +107,6 @@
             @media (prefers-color-scheme: dark) {
               color: rgb(from white r g b / 1);
             }
-          }
-          @media (prefers-color-scheme: light) {
-            color: rgb(from black r g b / 0.8);
           }
         }
         a {
@@ -146,11 +146,12 @@
     </style>
   </head>
   <body>
-    <img src="imgs/waving.gif" alt="waving hi!" />
+    <img draggable="false" src="imgs/waving.gif" alt="waving hi!" />
     <h1 class="welcome">madebymith - official website</h1>
     <a
       href="https://github.com/madebymith"
       target="_blank"
+      aria-label="This link will lead you to MadeByMith GitHub profile"
       title='"one commit at a time" - MadeByMith GitHub'
       >&quot;one commit at a time&quot;</a
     >
