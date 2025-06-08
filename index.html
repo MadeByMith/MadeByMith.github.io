@@ -7,33 +7,118 @@
     <meta property="og:title" content="MadeByMith - Website" />
     <meta property="og:description" content="MadeByMith Official Website" />
     <meta property="og:image" content="imgs/MadeByMith-Logo.png" />
+    <meta property="og:site_name" content="MadeByMith Official Website" />
     <meta name="description" content="MadeByMith Official Website" />
     <link
       rel="shortcut icon"
       href="imgs/MadeByMith-Logo.png"
       type="image/png"
     />
-    <title>MadeByMith - Website</title>
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-  </head>
-  <body
-    class="px-4 lg:px-0 w-screen min-h-dvh place-items-center grid content-center gap-4"
-  >
-    <img
-      class="size-12 md:size-32"
-      src="https://camo.githubusercontent.com/6bc9afee3f6728f9fa88c71cb9c6debfd4dea4ea53aeac1d7b44752a15bf4d14/68747470733a2f2f6d656469612e74656e6f722e636f6d2f6e65625a796c386f4e3749414141416a2f776176652d68656c6c6f2e676966"
-      alt="Waving Hello!"
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
     />
-    <h1
-      class="text-2xl lg:text-4xl font-bold font-mono text-center text-balance"
-    >
-      This is
-      <a
-        href="https://github.com/MadeByMith"
-        target="_blank"
-        class="text-[#00D3FA]"
-        >MadeByMith</a
-      >'s official site!
-    </h1>
+    <title>MadeByMith - Website</title>
+    <style>
+      @layer reset,styling,utils;
+      @layer reset {
+        *,
+        ::after,
+        ::before {
+          box-sizing: border-box;
+        }
+        * {
+          margin: 0;
+          padding: 0;
+          font: inherit;
+        }
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+          margin-inline: 0;
+          margin-block: 0;
+        }
+        html {
+          font-family: "Geist Mono", monospace;
+          color-scheme: dark light;
+        }
+        body {
+          min-height: 100dvh;
+        }
+        img,
+        picture,
+        svg,
+        video {
+          display: block;
+          max-width: 100%;
+        }
+      }
+      @layer styling {
+        body {
+          background-color: rgb(from black r g b / 0.3);
+        }
+        img {
+          user-select: none;
+          pointer-events: none;
+          aspect-ratio: initial;
+          width: 5rem;
+          @media (width >= 1024px) {
+            width: 6rem;
+          }
+          @media (width >= 1920px) {
+            width: 8rem;
+          }
+        }
+        .welcome {
+          :has(&) {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+          }
+          text-wrap: balance;
+          font-weight: bold;
+          font-size: clamp(1rem, 5vw, 3rem);
+          text-align: center;
+          color: rgb(from white r g b / 0.7);
+          transition: 200ms ease-in-out;
+          &:hover {
+            color: white;
+          }
+        }
+        blockquote {
+          color: #5faced;
+          font-size: 0.8rem;
+          font-style: italic;
+          text-align: center;
+          @media (width >= 768px) {
+            font-size: 0.9rem;
+          }
+          @media (width >= 1024px) {
+            font-size: 1rem;
+          }
+          @media (width >= 1920px) {
+            font-size: 1.2rem;
+          }
+        }
+      }
+      @layer utils {
+        ::selection {
+          background-color: #fedc5b;
+          color: Canvas;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <img src="imgs/waving.gif" alt="waving hi!" />
+    <h1 class="welcome">madebymith - official website</h1>
+    <blockquote>&quot;one commit at a time&quot;</blockquote>
   </body>
 </html>
